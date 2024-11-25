@@ -1,1 +1,239 @@
 <p>cadastro works!</p>
+
+<h2>Dados Pessoais</h2>
+<hr>
+<div class = "mb-3 mt-3">
+  <label for="nome" class="form-label">
+    Nome Completo
+    <input id="nome" class="form-control green-border large-input" placeholder="Digite seu Nome Completo" type="text" [(ngModel)] = "nomeCompleto"/>
+  </label>
+</div>
+
+<div class = "form floating col-md-6">
+  <label for="nomeSocial" class="form-label">
+    Nome Social
+    <input id="nomeSocial" class="form-control green-border" type="text" [(ngModel)] = "nomeSocial"/>
+  </label>
+</div>
+
+<div class = "form floating col-md-6">
+  <label for="nomeM" class="form-label">
+    Nome da Mãe
+    <input id="nomeM" class="form-control green-border" type="text" [(ngModel)] = "nomeM"/>
+  </label>
+</div>
+
+<div class = "form floating col-md-6">
+  <label for="nomePai" class="form-label">
+    Nome do Pai
+    <input id="nomePai" class="form-control green-border" type="text" [(ngModel)] = "nomePai"/>
+  </label>
+</div>
+
+<div class = "form floating col-md-6">
+  <label for="nomeM" class="form-label">
+    Nome da Mãe
+    <input id="nomeM" class="form-control green-border" type="text" [(ngModel)] = "nomeM"/>
+  </label>
+</div>
+
+<div class = "form floating col-md-6">
+  <label for="DataNascimento" class="form-label">
+    Data de Nascimento
+    <input id="DataNascimento" class="form-control green-border" type="date" [(ngModel)] = "DataNascimento"/>
+  </label>
+</div>
+
+<div class="form-group">
+  <label for="radios">Seleiona sua sexualidade</label>
+  <div class="form-check">
+    <label class="form-check-label" for = "option1">Homem</label>
+    <input
+    type="radio"
+    class="form-check-input"
+    id="Homem"
+    name="Homem"
+    value="1"
+    [(ngModel)] = "Sexo">
+  </div>
+  <div class="form-check">
+    <input
+      type="radio"
+      class="form-check-input"
+      id="Mulher"
+      name="Mulher"
+      value="2"
+      [(ngModel)]="Sexo">
+    <label class="form-check-label" for="option2">Mulher</label>
+  </div>
+
+ <div class="form-group">
+  <label for="radios">Selecione sua nacionalidade</label>
+
+  <div class="form-check">
+    <input
+    type="radio"
+    class="form-check-input"
+    id="Brasileiro"
+    name="Brasileiro"
+    value="1"
+    [(ngModel)] = "Nacionalidade">
+    <label class="form-check-label" for="option1">Brasileiro</label>
+  </div>
+
+
+   <div class="form-check">
+    <input
+    type="radio"
+    class="form-check-input"
+    id="Brasileiro Naturalizado"
+    name="Brasileiro Naturalizado"
+    value="2"
+    [(ngModel)] = "Nacionalidade">
+    <label class="form-check-label" for="Brasileiro Naturalizado">Brasileiro Naturalizado</label>
+   </div>
+
+   <div class="form-check">
+    <input
+    type="radio"
+    class="form-check-input"
+    id="Estrangeiro"
+    name="Estrangeiro"
+    value="3"
+    [(ngModel)] = "Nacionalidade">
+    <label class="form-check-label" for="option3">Estrangeiro</label>
+   </div>
+
+   <div class = "form floating col-md-6">
+    <label for="Municipio de Nascimento" class="form-label">
+      Municipio de Nascimento
+      <input id="MunicipiodeNascimento" class="form-control green-border" type="text" [(ngModel)] = "MunicipiodeNascimento"/>
+    </label>
+  </div>
+
+  <div class = "form floating col-md-6">
+    <label for="Raça/Cor" class="form-label"></label>
+      Raça/Cor
+      <input id="Ra" class="form-control green-border" type="text" [(ngModel)] = "Ra"/>
+  </div>
+
+  <div class = "form floating col-md-6">
+    <label for="Frequenta Escola" class="form-label">
+      Frequenta Escola
+      <input id="FrequentaEscola" class="form-control green-border" type="text" [(ngModel)] = "FrequentaEscola"/>
+    </label>
+  </div>
+
+  <div class = "form floating col-md-6">
+    <label for="Situação Familiar" class="form-label">
+      Situação Familiar
+      <input id="Situação" class="form-control green-border" type="text" [(ngModel)] = "SituacaoFamiliar"/>
+    </label>
+  </div>
+
+  <div class = "form floating col-md-6">
+    <label for="Estabelecimento de Veículo" class="form-label">
+     Estabelecimento de Veículo
+      <input id="EstabelecimentoVeiculo" class="form-control green-border" type="text" [(ngModel)] = "EstabelecimentoVeiculo"/>
+    </label>
+  </div>
+
+  <div class = "form floating col-md-6">
+    <label for="Estabelecimento de Cadastro" class="form-label">
+     Estabelecimento de Cadastro
+      <input id="EstabelecimentoCadastro" class="form-control green-border" type="text" [(ngModel)] = "EstabelecimentoCadastro"/>
+    </label>
+  </div>
+
+  <div class="form-group">
+    <label for="radios">Possuí alguma deficiencia</label>
+
+    <div class="form-check">
+      <input
+      type="radio"
+      class="form-check-input"
+      id="Visual"
+      name="Visual"
+      value="1"
+      [(ngModel)] = "Visual">
+      <label class="form-check-label" for="option1">Visual</label>
+    </div>
+
+    <div class="form-check">
+      <input
+      type="radio"
+      class="form-check-input"
+      id="Auditiva"
+      name="Auditiva"
+      value="2"
+      [(ngModel)] = "Auditiva">
+      <label class="form-check-label" for="Auditiva">Auditiva</label>
+    </div>
+
+    <div class="form-check">
+        <input
+          type="radio"
+          class="form-check-input"
+          id="Motora"
+          name="Motora"
+          value="3"
+          [(ngModel)]="Motora">
+        <label class="form-check-label" for="Motora">Motora</label>
+      </div>
+
+
+
+    <div class="form-check">
+      <input
+      type="radio"
+      class="form-check-input"
+      id="Intelectual"
+      name="Intelectual"
+      value="4"
+      [(ngModel)] = "Intelectual">
+      <label class="form-check-label" for="option4">Intelectual</label>
+    </div>
+
+    <hr>
+
+    <h2>Dados de Contato</h2>
+
+    <div class = "form floating col-md-6">
+      <label for="Telefone de Celular" class="form-label">
+       Telefone Celular
+        <input id="TelefoneCelular" class="form-control green-border" type="text" [(ngModel)] = "TelefoneCelular"/>
+      </label>
+    </div>
+
+    <div class = "form floating col-md-6">
+      <label for="Telefone Residencial" class="form-label">
+       Telefone Residencial
+        <input id="TelefoneResidencial" class="form-control green-border" type="text" [(ngModel)] = "TelefoneResidencial"/>
+      </label>
+    </div>
+
+    <div class = "form floating col-md-6">
+      <label for="Telefone Comercial" class="form-label">
+       Telefone Comercial
+        <input id="TelefoneComercial" class="form-control green-border" type="text" [(ngModel)] = "TelefoneComercial"/>
+      </label>
+    </div>
+
+    <div class = "form floating col-md-6">
+        <label for="Contato" class="form-label">
+         Contato
+          <input id="Contato" class="form-control green-border" type="text" [(ngModel)] = "Contato"/>
+        </label>
+      </div>
+
+      
+      <div class = "form floating col-md-6">
+        <label for="Email" class="form-label">
+         Email
+          <input id="Email" class="form-control green-border" type="text" [(ngModel)] = "Email"/>
+        </label>
+      </div>
+  
+
+
+
