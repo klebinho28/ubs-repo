@@ -11,11 +11,8 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface PacienteRepository extends JpaRepository<PacienteEntity, Integer> {
 
-    Optional<PacienteEntity> findById(long codigo);
 
-    void deleteById(long codigo);
 
-    @Query(value = "SELECT * FROM paciente WHERE codigo = :codigo", nativeQuery = true)
-    List<PacienteEntity> findByCodigo(@Param("codigo") Long codigo);
 
+    
 }
