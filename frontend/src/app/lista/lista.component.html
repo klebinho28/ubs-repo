@@ -1,6 +1,25 @@
-<p>lista works!</p>
-<div *ngFor="let paciente of pacientes">
-    <b>{{paciente.nome}}</b><br>
-    <b>{{paciente.id}}</b><br>
-    <b>{{paciente.cpf}}</b><br>
+<div class="container mt-5">
+  <h2>Lista de Pacientes</h2>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Nome Completo</th>
+        <th scope="col">Nome Social</th>
+        <th scope="col">Nome da Mãe</th>
+        <th scope="col">Nome do Pai</th>
+        <th scope="col">Escolaridade</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let paciente of pacientes">
+        <td>{{ paciente.id }}</td>
+        <td>{{ paciente.nomeCompleto }}</td>
+        <td>{{ paciente.nomeSocial }}</td>
+        <td>{{ paciente.nomeMae }}</td>
+        <td>{{ paciente.nomePai }}</td>
+        <td>{{ paciente.escolaridade }}</td>
+      </tr>
+    </tbody>
+  </table>
 </div>

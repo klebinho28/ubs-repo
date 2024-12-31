@@ -1,5 +1,7 @@
 package br.sp.gov.fatec.ubs.backend.model;
 
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;
@@ -16,52 +18,45 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor;
 
-@CrossOrigin(origins="*")
+@CrossOrigin(origins = "*")
 @RestController
-@RequestMapping({"/pacientes"})
+@RequestMapping({ "/pacientes" })
 public class PacienteController {
     @Autowired
     PacienteRepository bd;
 
-    @GetMapping
-    public Iterable<Paciente> buscarPacientes(){
+    @PostMapping("/api/paciente")
+    public Paciente gravar(@RequestBody Paciente obj) {
+        bd.save(obj);
+        return obj;
+    }
+
+    @GetMapping("/api/paciente/{codigo}")
+    public Paciente ler(@PathVariable long codigo) {
+        Optional<Paciente> obj = bd.findById(codigo);
+        if (obj.isPresent()) {
+            return obj.get();
+        } else {
+            return null;
+        }
+
+    }
+
+    @DeleteMapping("/api/paciente/{codigo}")
+    public String remover(@PathVariable long codigo) {
+        bd.deleteById(codigo);
+        return "paciente" + codigo + "removido com sucesso";
+    }
+
+    @PutMapping("/api/paciente")
+    public String alterar(@RequestBody Paciente obj) {
+        bd.save(obj);
+        return "Paciente alterado com sucesso";
+    }
+
+    @GetMapping("/api/paciente")
+    public Iterable<Paciente> listar() {
         return bd.findAll();
-    }
-
-    @GetMapping("/{idPaciente}")
-    public Paciente buscarPacientePorId(@PathVariable Long idPaciente){
-        return bd.findById(idPaciente).get();
-    }
-
-    @PostMapping
-    public ResponseEntity<?> cadastrarPaciente(@RequestBody Paciente paciente){
-        try {
-            bd.save(paciente);
-            return new ResponseEntity<>(paciente, HttpStatus.OK);
-        } catch (Exception e) {
-            Paciente pac = bd.buscaPorNomeOuCpf("", paciente.getCpf()).get(0);
-            return new ResponseEntity<>(pac, HttpStatus.CONFLICT);
-        }
-    }
-
-    @PutMapping(value="/{idPaciente}")
-    public Paciente atualizarPaciente(@PathVariable("idPaciente") long id, @RequestBody Paciente paciente){
-        return bd.findById(id).map(record->{
-            record.setNome(paciente.getNome());
-            return bd.save(record);
-        }).orElseGet(()->{
-            paciente.setId(id);
-            return bd.save(paciente);
-        }
-        );
-    }
-
-    @DeleteMapping(path="/{idPaciente}")
-    public ResponseEntity<?> deletarPaciente(@PathVariable("idPaciente") long id){
-        return bd.findById(id).map(record->{
-            bd.deleteById(id);
-            return ResponseEntity.ok().build();
-        }).orElse(ResponseEntity.notFound().build());
     }
 
 }

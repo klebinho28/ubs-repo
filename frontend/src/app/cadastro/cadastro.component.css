@@ -1,0 +1,16 @@
+/* Alterar a borda e texto dos campos para verde marinho */
+.form-control {
+  border-color: #2C3E50; /* Verde marinho nas bordas */
+  color: #2C3E50; /* Verde marinho no texto */
+}
+
+/* Alterar a cor do placeholder para cinza */
+.form-control::placeholder {
+  color: #7f8c8d; /* Cinza */
+}
+
+/* Alterar a cor da borda quando o campo estiver em foco (focus) */
+.form-control:focus {
+  border-color: #2C3E50; /* Verde marinho nas bordas quando estiver em foco */
+  box-shadow: 0 0 0 0.25rem rgba(44, 62, 80, 0.25); /* Sombras suaves para o foco */
+}

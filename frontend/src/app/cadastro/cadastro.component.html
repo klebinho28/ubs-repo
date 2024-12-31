@@ -1,5 +1,189 @@
-<h1>Cadastro</h1>
-id:<input type="id" [(ngModel)]="obj.id"><br>
-nome:<input type="nome" [(ngModel)]="obj.nome"><br>
-cpf:<input type="cpf" [(ngModel)]="obj.cpf"><br>
-<button (click)="salvar();">Salvar</button>
+<div class="container">
+  <h4>dados Pessoais</h4>
+  <hr>
+
+  <div class=" form-floating mb-3 mt-3">
+    <input id="nome" class="form-control" border-color="" type="text" [(ngModel)]="obj.nome" required/>
+    <label>Digite seu Nome Completp</label>
+    <small *ngIf="!obj.nome" class="text-danger">Campo Obrigatório</small>
+  </div>
+
+  <div class="form-floating mb-3 mt-3">
+    <input id="nomeSocial" class="form-control" type="nomeSocial" ([ngModel])="obj.nomeSocial"/>
+    <label for="nomeSocial">Digite seu Nome Social (se existe)</label>
+  </div>
+
+
+  <div class="row mt-3">
+    <!-- Nome da mãe -->
+    <div class="form-floating mb-3 mt-3">
+      <input id="nomeMae" class="form-control" type="text" [(ngModel)]="obj.nomeMae" />
+      <label for="nomeMae">Nome da mãe (se existente):</label>
+    </div>
+
+    <!-- Nome do pai -->
+    <div class="form-floating mb-3 mt-3">
+      <input id="nomePai" class="form-control" type="text" [(ngModel)]="obj.nomePai" />
+      <label for="nomePai">Nome do pai (se existente):</label>
+    </div>
+  </div>
+
+  <!-- Dados de Nascimento -->
+  <h4>Dados de Nascimento</h4>
+  <hr>
+  <div class="row mt-3">
+    <!-- Data de nascimento -->
+    <div class="form-floating mb-3 mt-3">
+      <input id="dataNascimento" class="form-control" type="date" [(ngModel)]="obj.dataNascimento" required />
+      <label for="dataNascimento">Data de nascimento:</label>
+      <small *ngIf="!obj.dataNascimento" class="text-danger">Campo obrigatório.</small>
+    </div>
+
+    <!-- Sexo -->
+    <div class="form-floating mb-3 mt-3">
+      <select id="sexo" class="form-control" [(ngModel)]="obj.sexo" required>
+        <option value="" disabled selected>Selecione...</option>
+        <option value="Masculino">Masculino</option>
+        <option value="Feminino">Feminino</option>
+        <option value="Outro">Outro</option>
+      </select>
+      <label for="sexo">Sexo:</label>
+      <small *ngIf="!obj.sexo" class="text-danger">Campo obrigatório.</small>
+    </div>
+  </div>
+
+  <!-- Localidade -->
+  <h4>Localidade</h4>
+  <hr>
+  <div class="row mt-3">
+    <!-- Nacionalidade -->
+    <div class="form-floating mb-3 mt-3">
+      <input id="nacionalidade" class="form-control" type="text" [(ngModel)]="obj.Nacionalidade" required />
+      <label for="nacionalidade">Nacionalidade:</label>
+      <small *ngIf="!obj.Nacionalidade" class="text-danger">Campo obrigatório.</small>
+    </div>
+
+    <!-- Município de nascimento -->
+    <div class="form-floating mb-3 mt-3">
+      <input id="municipioNascimento" class="form-control" type="text" [(ngModel)]="obj.MunicipioNascimento" required />
+      <label for="municipioNascimento">Município de nascimento:</label>
+      <small *ngIf="!obj.MunicipioNascimento" class="text-danger">Campo obrigatório.</small>
+    </div>
+  </div>
+
+  <!-- Outros Dados -->
+  <h4>Outros Dados</h4>
+  <hr>
+  <div class="form-floating col-md-6">
+    <select id="racaCor" class="form-control" [(ngModel)]="obj.Raca" required>
+      <option value="" disabled selected>Selecione...</option>
+      <option value="Branca">Branca</option>
+      <option value="Preta">Preta</option>
+      <option value="Parda">Parda</option>
+      <option value="Amarela">Amarela</option>
+      <option value="Indígena">Indígena</option>
+    </select>
+    <label for="racaCor">Raça/Cor:</label>
+    <small *ngIf="!obj.Raca" class="text-danger">Campo obrigatório.</small>
+  </div>
+    <!-- Frequenta escola -->
+    <div class="form-floating mb-3 mt-3">
+      <select id="frequentaEscola" class="form-control" [(ngModel)]="obj.FrequentaEscola">
+        <option value="" disabled selected>Selecione...</option>
+        <option value="Sim">Sim</option>
+        <option value="Não">Não</option>
+      </select>
+      <label for="frequentaEscola">Frequenta escola:</label>
+    </div>
+  </div>
+<!-- Dados de Deficiência -->
+<h4>Deficiência</h4>
+<hr>
+<div class="row mt-3">
+  <!-- Deficiência -->
+  <div class="form-floating mb-3 mt-3">
+    <select id="deficiente" class="form-control" [(ngModel)]="obj.deficiencia">
+      <option value="" disabled selected>Selecione...</option>
+      <option value="Sim">Sim</option>
+      <option value="Não">Não</option>
+    </select>
+    <label for="deficiente">Deficiente:</label>
+  </div>
+
+  <!-- Deficiência Visual -->
+  <div class="form-floating mb-3 mt-3">
+    <select id="visual" class="form-control" [(ngModel)]="obj.visual">
+      <option value="" disabled selected>Selecione...</option>
+      <option value="Sim">Sim</option>
+      <option value="Não">Não</option>
+    </select>
+    <label for="visual">Deficiência Visual:</label>
+  </div>
+
+
+
+
+  <!-- Deficiência Auditiva -->
+  <div class="form-floating mb-3 mt-3">
+    <select id="auditiva" class="form-control" [(ngModel)]="obj.auditiva">
+      <option value="" disabled selected>Selecione...</option>
+      <option value="Sim">Sim</option>
+      <option value="Não">Não</option>
+    </select>
+    <label for="auditiva">Deficiência Auditiva:</label>
+  </div>
+</div>
+
+<!-- Deficiência Motora e Intelectual -->
+<div class="row mt-3">
+  <!-- Deficiência Motora -->
+  <div class="form-floating mb-3 mt-3">
+    <select id="motora" class="form-control" [(ngModel)]="obj.motora">
+      <option value="" disabled selected>Selecione...</option>
+      <option value="Sim">Sim</option>
+      <option value="Não">Não</option>
+    </select>
+    <label for="motora">Deficiência Motora:</label>
+  </div>
+
+  <!-- Deficiência Intelectual -->
+  <div class="form-floating mb-3 mt-3">
+    <select id="intelectual" class="form-control" [(ngModel)]="obj.intelectual">
+      <option value="" disabled selected>Selecione...</option>
+      <option value="Sim">Sim</option>
+      <option value="Não">Não</option>
+    </select>
+    <label for="intelectual">Deficiência Intelectual:</label>
+  </div>
+</div>
+
+  <!-- Dados de Contato -->
+  <h4>Dados de Contato</h4>
+  <hr>
+  <div class="row mt-3">
+    <!-- Celular -->
+    <div class="form-floating mb-3 mt-3">
+      <input id="celular" class="form-control" type="tel" [(ngModel)]="obj.contatoCelular" required />
+      <label for="celular">Celular:</label>
+      <small *ngIf="!obj.contatoCelular" class="text-danger">Campo obrigatório.</small>
+    </div>
+
+    <!-- Residencial -->
+    <div class="form-floating mb-3 mt-3">
+      <input id="residencial" class="form-control" type="tel" [(ngModel)]="obj.contatoResidencial" />
+      <label for="residencial">Telefone Residencial:</label>
+    </div>
+
+    <!-- Email -->
+    <div class="form-floating mb-3 mt-3">
+      <input id="email" class="form-control" type="email" [(ngModel)]="obj.contatoEmail" required />
+      <label for="email">Email:</label>
+      <small *ngIf="!obj.contatoEmail" class="text-danger">Campo obrigatório.</small>
+    </div>
+  </div>
+
+  <div class="container">
+    <button class="btn-enviar" (click)="salvar();">Enviar</button>
+  </div>
+
+
