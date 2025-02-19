@@ -1,0 +1,93 @@
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar */
+.navbar {
+  background-color: white; /* Fundo branco */
+  padding: 10px 20px;
+  border: none;
+}
+
+/* Marca (Logo) */
+.navbar .navbar-brand {
+  font-size: 1.75rem;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+  color: green;
+}
+
+/* Links da Navbar */
+.navbar-nav .nav-link {
+  background-color: white; /* Fundo branco */
+  color: green !important; /* Texto verde */
+  font-size: 1.1rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  border-radius: 5px; /* Deixa levemente arredondado */
+  padding: 10px 15px;
+  text-align: center;
+}
+
+/* Hover dos Links */
+.navbar-nav .nav-link:hover {
+  color: darkgreen !important; /* Verde escuro no hover */
+  background-color: #f0f0f0; /* Fundo levemente cinza */
+}
+
+/* Link Ativo */
+.navbar-nav .nav-link.active {
+  color: green !important;
+  background-color: white !important;
+}
+
+/* Botão "Entrar" */
+.navbar .btn-entrar {
+  background-color: white;
+  color: green;
+  border: 2px solid green;
+  border-radius: 20px;
+  padding: 8px 16px;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover do Botão "Entrar" */
+.navbar .btn-entrar:hover {
+  background-color: green;
+  color: white;
+}
+
+/* Ajuste da Navbar para Alinhamento */
+.navbar .navbar-collapse {
+  justify-content: flex-end;
+}
+
+/* Layout Geral */
+.container {
+  padding: 40px 15px;
+  background-color: transparent;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .navbar-nav {
+    text-align: center;
+    width: 100%;
+  }
+
+  .navbar-nav .nav-link {
+    padding: 10px 0;
+  }
+
+  .container h1 {
+    font-size: 2rem;
+  }
+
+  .container .btn {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+}

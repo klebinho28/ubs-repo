@@ -1,0 +1,38 @@
+input[type="text"], input[type="password"], input[type="email"] {
+  border: 2px solid #2AAC6B;
+  border-radius: 4px; /* Ajuste opcional para deixar as bordas arredondadas */
+}
+
+/* Para manter a borda também nos campos focados */
+input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus {
+  outline: none;
+  border-color: #2AAC6B;
+}
+
+input[type="text"], input[type="password"], input[type="email"], select {
+  border: 2px solid #2AAC6B;
+  border-radius: 4px; /* Ajuste opcional para bordas arredondadas */
+}
+
+/* Aplica borda verde para os campos de texto ao receber foco */
+input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus, select:focus {
+  outline: none;
+  border-color: #2AAC6B;
+}
+
+.btn-enviar {
+  background-color: #2AAC6B;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.btn-enviar:hover {
+  background-color: #fff;
+}

@@ -1,0 +1,49 @@
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.left-panel {
+  background-color: #2ca058;
+  color: white;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.right-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+
+input {
+  margin-bottom: 10px;
+  padding: 8px;
+  border: 1px solid #2ca058;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #2ca058;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.google-btn {
+  background-color: #db4437;
+  color: white;
+}
