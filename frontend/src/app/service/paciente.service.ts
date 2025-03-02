@@ -24,10 +24,10 @@ export class PacienteService {
     return this.http.get<Paciente>(`http://localhost:8091/api/paciente/${codigo}`);
   }
 
-  // Método para atualizar os dados de um paciente
-  updatePaciente(id: number, paciente: Paciente): Observable<Paciente> {
-    return this.http.put<Paciente>(`http://localhost:8091/api/paciente/${id}`, paciente);
-  }
+ // Método para atualizar os dados de um paciente
+ alterar(paciente: Paciente): Observable<any> {
+  return this.http.put('http://localhost:8091/api/paciente', paciente, { responseType: 'text' });
+}
 
   // Método para remover um paciente
   remover(codigo: number): Observable<{ mensagem: string }> {

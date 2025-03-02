@@ -5,23 +5,37 @@ body, html {
 
 /* Navbar */
 .navbar {
-  background-color: white; /* Fundo branco */
+  background-color: #2AAC6B !important; /* Fundo verde */
+  width: 100%; /* Garante que cubra toda a largura */
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Alinha os elementos corretamente */
   padding: 10px 20px;
-  border: none;
 }
 
+/* Fundo Verde para "UBS Geraldo de Paula" */
+.navbar-brand-container {
+  background-color: #2AAC6B; /* Fundo verde */
+  padding: 15px 20px; /* Espaçamento interno */
+  text-align: left; /* Alinha o texto à esquerda */
+  width: 100%; /* Ocupa toda a largura */
+  display: flex;
+  align-items: center;
+}
 /* Marca (Logo) */
+/* Texto "UBS Geraldo de Paula" */
 .navbar .navbar-brand {
   font-size: 1.75rem;
   font-weight: bold;
   font-family: 'Montserrat', sans-serif;
-  color: green;
+  color: white !important; /* Texto branco */
+  padding: 10px 15px;
+  margin: 0;
 }
-
 /* Links da Navbar */
 .navbar-nav .nav-link {
-  background-color: white; /* Fundo branco */
-  color: green !important; /* Texto verde */
+  background-color: transparent !important; /* Fundo branco */
+  color: white !important; /* Texto verde */
   font-size: 1.1rem;
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
@@ -32,21 +46,21 @@ body, html {
 
 /* Hover dos Links */
 .navbar-nav .nav-link:hover {
-  color: darkgreen !important; /* Verde escuro no hover */
-  background-color: #f0f0f0; /* Fundo levemente cinza */
+  color: #f0f0f0 !important; /* Verde escuro no hover */
+  background-color: rgba(255, 255, 255, 0.2) !important; /* Fundo levemente cinza */
 }
 
 /* Link Ativo */
 .navbar-nav .nav-link.active {
-  color: green !important;
+  color: #2AAC6B !important;
   background-color: white !important;
 }
 
 /* Botão "Entrar" */
 .navbar .btn-entrar {
-  background-color: white;
-  color: green;
-  border: 2px solid green;
+  background-color: transparent;
+  color: white !important;
+  border: 2px solid whitesmoke;
   border-radius: 20px;
   padding: 8px 16px;
   font-weight: bold;
@@ -56,8 +70,8 @@ body, html {
 
 /* Hover do Botão "Entrar" */
 .navbar .btn-entrar:hover {
-  background-color: green;
-  color: white;
+  background-color: white;
+  color: green !important;
 }
 
 /* Ajuste da Navbar para Alinhamento */

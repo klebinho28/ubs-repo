@@ -39,40 +39,45 @@ export class ListaComponent {
       }
     });
   }
+ 
+  salvarEdicao(paciente: Paciente) {
 
-  salvarEdicao() {
-    if (this.pacienteSelecionado) {
-      const codigoPaciente = this.pacienteSelecionado.codigo ?? 0;
+    console.log("Paciente selecionado antes de envio:",paciente);
 
-      this.service.updatePaciente(codigoPaciente, this.pacienteSelecionado).subscribe({
-        next: () => {
-          console.log('Paciente ${codigoPaciente} atualizado com sucesso');
-          this.mensagem = 'Paciente atualizado com sucesso!';
-          this.pacienteSelecionado = null;
-          this.listar();
-        },
-        error: () => {
-          this.mensagem = "Erro ao atualizar o paciente.";
-        }
-      });
+    if (!paciente || !paciente.codigo) {
+      console.error("Paciente inválido!", paciente);
+      return;
     }
+ 
+    this.service.alterar(paciente).subscribe({
+      next: () => {
+        console.log('Paciente atualizado com sucesso!');
+        this.mensagem = 'Paciente atualizado com sucesso!';
+        this.listar(); // Atualiza a lista de pacientes
+        this.pacienteSelecionado = null; // Fecha o formulário de edição
+      },
+      error: (err: any) => {
+        console.error('Erro ao atualizar paciente:', err);
+        this.mensagem = 'Erro ao atualizar paciente';
+      }
+    });
   }
-
+ 
   cancelarEdicao() {
-    this.pacienteSelecionado = null;
+    this.pacienteSelecionado = null;  
   }
-
+ 
   remover(codigo: number) {
     if (!codigo) {
       console.error('Código inválido para remoção');
       return;
     }
-
+ 
     if (confirm('Tem certeza que deseja remover este paciente?')) {
       this.service.remover(codigo).subscribe({
-        next: (response) => {  // response agora é do tipo { mensagem: string }
-          console.log(response.mensagem);  // Exibe a mensagem retornada pela API
-          this.mensagem = response.mensagem;  // Atualiza a mensagem na interface
+        next: (response) => {  
+          console.log(response.mensagem);  
+          this.mensagem = response.mensagem;
           this.listar();
         },
         error: (erro) => {
@@ -80,7 +85,7 @@ export class ListaComponent {
           this.mensagem = 'Erro ao remover paciente';
         }
       });
-    }
-  }
-
-  }
+    }
+  }
+}
+ 
