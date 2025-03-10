@@ -5,55 +5,60 @@ body, html {
 
 /* Navbar */
 .navbar {
-  background-color: #2AAC6B !important; /* Fundo verde */
-  width: 100%; /* Garante que cubra toda a largura */
+  background-color: #2AAC6B !important;
+  width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Alinha os elementos corretamente */
+  justify-content: space-between;
   padding: 10px 20px;
 }
 
 /* Fundo Verde para "UBS Geraldo de Paula" */
 .navbar-brand-container {
-  background-color: #2AAC6B; /* Fundo verde */
-  padding: 15px 20px; /* Espaçamento interno */
-  text-align: left; /* Alinha o texto à esquerda */
-  width: 100%; /* Ocupa toda a largura */
+  background-color: #2AAC6B;
+  padding: 15px 20px;
+  text-align: left;
+  width: 100%;
   display: flex;
   align-items: center;
 }
+
 /* Marca (Logo) */
 /* Texto "UBS Geraldo de Paula" */
 .navbar .navbar-brand {
   font-size: 1.75rem;
   font-weight: bold;
   font-family: 'Montserrat', sans-serif;
-  color: white !important; /* Texto branco */
+  color: white !important;
   padding: 10px 15px;
   margin: 0;
 }
-/* Links da Navbar */
+
+/* Links da Navbar (Transformados em Botões) */
 .navbar-nav .nav-link {
-  background-color: transparent !important; /* Fundo branco */
-  color: white !important; /* Texto verde */
+  background-color: transparent !important;
+  color: white !important;
   font-size: 1.1rem;
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
-  border-radius: 5px; /* Deixa levemente arredondado */
-  padding: 10px 15px;
+  border: 2px solid whitesmoke; /* Adiciona borda */
+  border-radius: 20px; /* Arredonda as bordas */
+  padding: 8px 16px; /* Ajusta o espaçamento interno */
+  margin: 0 5px; /* Adiciona margem entre os botões */
   text-align: center;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Adiciona transição suave */
 }
 
-/* Hover dos Links */
+/* Hover dos Links (Botões) */
 .navbar-nav .nav-link:hover {
-  color: #f0f0f0 !important; /* Verde escuro no hover */
-  background-color: rgba(255, 255, 255, 0.2) !important; /* Fundo levemente cinza */
+  background-color: white !important;
+  color: #2AAC6B !important;
 }
 
 /* Link Ativo */
 .navbar-nav .nav-link.active {
-  color: #2AAC6B !important;
   background-color: white !important;
+  color: #2AAC6B !important;
 }
 
 /* Botão "Entrar" */
@@ -71,7 +76,7 @@ body, html {
 /* Hover do Botão "Entrar" */
 .navbar .btn-entrar:hover {
   background-color: white;
-  color: green !important;
+  color: #2AAC6B !important;
 }
 
 /* Ajuste da Navbar para Alinhamento */
@@ -104,4 +109,40 @@ body, html {
     font-size: 1rem;
     padding: 10px 20px;
   }
+}
+
+.nav-item .nav-link.btn,
+.navbar .btn-light { /* Adiciona o seletor para o botão "Entrar" */
+  display: inline-block;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  border: 2px solid white;
+  background-color: white;
+  color: #228B22;
+  border-radius: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin: 0 5px;
+}
+
+.nav-item .nav-link.btn:hover,
+.navbar .btn-light:hover { /* Adiciona o seletor para o botão "Entrar" no hover */
+  background-color: #f0f0f0;
+}
+
+.nav-item .nav-link.btn.active,
+.navbar .btn-light.active { /* Adiciona o seletor para o botão "Entrar" no estado ativo */
+  background-color: #d0d0d0;
+  color: #228B22;
+}
+
+.servicos-grid { /* Substitua ".servicos-grid" pelo seletor correto do seu grid */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Define o tamanho das colunas */
+  justify-items: center; /* Centraliza os itens dentro de cada célula do grid */
+  gap: 10px; /* Adiciona espaçamento entre os itens */
+}
+
+.servico { /* Substitua ".servico" pelo seletor correto dos seus serviços */
+  text-align: center; /* Centraliza o conteúdo dentro de cada serviço */
 }

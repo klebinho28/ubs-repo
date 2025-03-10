@@ -25,6 +25,7 @@
     <div class="form-group col-12">
       <label for="cpf">CPF do Paciente:</label>
       <input id="cpf" class="form-control" type="text" [(ngModel)]="paciente.cpf" />
+      <small *ngIf="!paciente.cpf" class="text-danger">Campo obrigatório.</small>
   </div>
 
   <div class="row mt-3">
