@@ -21,4 +21,19 @@ public interface PacienteRepository extends JpaRepository<PacienteEntity, Intege
     // Filtrar por documento
     @Query(value = "SELECT * FROM paciente WHERE documento = :documento", nativeQuery = true)
     List<PacienteEntity> findByDocumento(@Param("documento") String documento);
+
+    @Query(value = "SELECT * FROM paciente WHERE cpf = :cpf", nativeQuery =  true)
+    List<PacienteEntity> findByCpf(@Param("cpf")String cpf);
+
+    @Query(value = "SELECT * FROM paciente WHERE  = :nacionalidade", nativeQuery =  true)
+    List<PacienteEntity> findBynacionalidade(@Param("nacionalidade")String nacionalidade);
+
+    @Query(value = "SELECT * FROM paciente WHERE telefoneCelular = :telefoneCelular", nativeQuery =  true)
+    List<PacienteEntity> findBtelefoneCelular(@Param("telefoneCelular")String telefoneCelular);
+
+    // PacienteRepository.java
+@Query(value = "SELECT * FROM paciente WHERE email = :email", nativeQuery = true)
+List<PacienteEntity> findByEmail(@Param("email") String email);
+
+
 }

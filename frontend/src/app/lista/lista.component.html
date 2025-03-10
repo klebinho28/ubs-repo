@@ -11,7 +11,11 @@
           <tr>
             <th>Código</th>
             <th>Nome</th>
+            <th>CPF</th>
+            <th>Nacionalidade</th>
+            <th>Telefone Celular</th>
             <th>Data de Nascimento</th>
+            <th>Email</th>
             <th>Ações</th>
           </tr>
         </thead>
@@ -19,7 +23,11 @@
           <tr *ngFor="let paciente of pacientes">
             <td>{{ paciente.codigo || '-' }}</td>
             <td>{{ paciente.nomeCompleto || 'Não informado' }}</td>
+            <td>{{ paciente.cpf || 'Não informado'}}</td>
+            <td>{{ paciente.nacionalidade || 'Não informado'}}</td>
+            <td>{{ paciente.telefoneCelular || 'Não informado'}}</td>
             <td>{{ paciente.dataNascimento ? (paciente.dataNascimento | date: 'dd/MM/yyyy') : 'Não informado' }}</td>
+            <td>{{ paciente.email || 'Não informado'}}</td>
        
             <td>
               <!-- Botão Editar -->
@@ -79,7 +87,7 @@
 
       <div class="mb-3">
         <label class="form-label">Contato Celular</label>
-        <input class="form-control" [(ngModel)]="pacienteSelecionado.contatoCelular">
+        <input class="form-control" [(ngModel)]="pacienteSelecionado.telefoneCelular">
       </div>
     </div>
 

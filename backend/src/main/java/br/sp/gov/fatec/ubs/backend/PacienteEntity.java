@@ -13,6 +13,7 @@ public class PacienteEntity {
     private int codigo;
     private String nomeCompleto;
     private String nomeSocial;
+    private String cpf;
     private String nomeMae;
     private String nomePai;
     private String dataNascimento;
@@ -57,6 +58,14 @@ public class PacienteEntity {
 
     public void setNomeSocial(String nomeSocial) {
         this.nomeSocial = nomeSocial;
+    }
+
+    public String getcpf(){
+        return cpf;
+    }
+
+    public void setcpf(String cpf){
+        this.cpf = cpf;
     }
 
     public String getNomeMae() {

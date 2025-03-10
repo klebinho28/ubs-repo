@@ -10,5 +10,6 @@ export const routes: Routes = [
   { path: '', component: Tela2Component },  // Página inicial
   { path: 'login', component: LoginComponent },
   { path: 'lista', component: ListaComponent },
+  {path:'**', redirectTo:''},
   { path: 'upload', component: UploadComponent }
 ];

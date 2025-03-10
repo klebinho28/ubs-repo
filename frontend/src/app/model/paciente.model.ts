@@ -5,6 +5,7 @@ export class Paciente {
 
   public codigo?: number; // Código do paciente
   public nomeCompleto: string = ''; // Nome completo
+  public cpf:string='';
   public nomeSocial?: string; // Nome social (opcional)
   public nomeMae?: string; // Nome da mãe (opcional)
   public nomePai?: string; // Nome do pai (opcional)
@@ -29,14 +30,14 @@ export class Paciente {
   public intelectual?: 'Sim' | 'Não'; // Deficiência intelectual
 
   // Dados de contato
-  public contatoCelular: string = ''; // Celular
+  public telefoneCelular: string = ''; // Celular
   public contatoResidencial?: string; // Telefone residencial (opcional)
   public contatoComercial?: string; // Telefone comercial (opcional)
-  public contatoEmail: string = ''; // Email
+  public email: string = ''; // Email
 
 
 
   constructor(init?: Partial<Paciente>) {
-    Object.assign(this, init); 
-  }
+    Object.assign(this,init);
+}
 }

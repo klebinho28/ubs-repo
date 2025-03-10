@@ -65,10 +65,10 @@ describe('ListaComponent', () => {
         auditiva: 'Não',
         motora: 'Não',
         intelectual: 'Sim',
-        contatoCelular: '11999887766',
+        telefoneCelular: '11999887766',
         contatoResidencial: '2133445566',
         contatoComercial: '2233446677',
-        contatoEmail: 'maria@example.com'
+        email: 'maria@example.com'
       }
     ] as Paciente[]));  // Asserção de tipo
 
@@ -85,5 +85,5 @@ describe('ListaComponent', () => {
     expect(component.pacientes.length).toBe(2);  // Verifica se a lista tem dois pacientes
     expect(component.pacientes[0].nomeCompleto).toBe('João da Silva');  // Verifica o nome do primeiro paciente
     expect(component.pacientes[1].nomeCompleto).toBe('Maria Oliveira');  // Verifica o nome do segundo paciente
-  });
+});
 });
