@@ -52,6 +52,7 @@ describe('ListaComponent', () => {
         codigo: 2,  // Aqui também
         nomeCompleto: 'Maria Oliveira',
         nomeSocial: 'Maria',
+        cpf:'435.226.987-32',
         nomeMae: 'Ana Oliveira',
         nomePai: 'Carlos Oliveira',
         dataNascimento: new Date('1995-03-15'),
@@ -60,15 +61,19 @@ describe('ListaComponent', () => {
         municipioNascimento: 'Rio de Janeiro',
         racaCor: 'Parda',
         frequentaEscola: 'Não',
+        estabelecimentoVinculo:'Sim',
+        estabelecimentoCadastro:'Sim',
         deficiente: 'Sim',
         visual: 'Sim',
         auditiva: 'Não',
         motora: 'Não',
         intelectual: 'Sim',
         telefoneCelular: '11999887766',
-        contatoResidencial: '2133445566',
+        telefoneResidencial: '2133445566',
         contatoComercial: '2233446677',
-        email: 'maria@example.com'
+        email: 'maria@example.com',
+        endereco:'Rua Mariana'
+        
       }
     ] as Paciente[]));  // Asserção de tipo
 

@@ -13,9 +13,26 @@ import { PacienteService } from '../service/paciente.service';
   providers: [PacienteService]
 })
 export class ListaComponent {
+
+
+
+  cancelarEdicao() {
+    this.pacienteSelecionado = null; // Esconde o formulário de edição
+  }
+
+  pacienteSelecionado: any = {
+    nomeCompleto: '',
+    cpf: '',
+    telefoneCelular: '',
+    email: '',
+    endereco: '' // <-- Adicionado aqui
+  };
+
+
+
   mensagem: string = "";
   pacientes: Paciente[] = [];
-  pacienteSelecionado: Paciente | null = null;
+
 
   constructor(private service: PacienteService) {
     this.listar();
@@ -63,9 +80,7 @@ export class ListaComponent {
     });
   }
  
-  cancelarEdicao() {
-    this.pacienteSelecionado = null;  
-  }
+  
  
   remover(codigo: number) {
     if (!codigo) {

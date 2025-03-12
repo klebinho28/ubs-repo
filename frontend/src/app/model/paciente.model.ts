@@ -17,10 +17,16 @@ export class Paciente {
   // Localidade
   public nacionalidade: string = ''; // Nacionalidade
   public municipioNascimento: string = ''; // Município de nascimento
+  public Escolaridade:string = '';
+  public estabelecimentoVinculo:string='';
+  public estabelecimentoCadastro:string ='';
 
   // Outros dados
   public racaCor: 'Branca' | 'Preta' | 'Parda' | 'Amarela' | 'Indígena' = 'Branca'; // Raça/Cor
   public frequentaEscola?: 'Sim' | 'Não'; // Frequenta escola (opcional)
+ 
+
+
 
   // Dados de deficiência
   public deficiente?: 'Sim' | 'Não'; // Se o paciente possui deficiência
@@ -31,9 +37,11 @@ export class Paciente {
 
   // Dados de contato
   public telefoneCelular: string = ''; // Celular
-  public contatoResidencial?: string; // Telefone residencial (opcional)
+  public telefoneResidencial?: string; // Telefone residencial (opcional)
   public contatoComercial?: string; // Telefone comercial (opcional)
   public email: string = ''; // Email
+  public endereco:string='';
+  
 
 
 

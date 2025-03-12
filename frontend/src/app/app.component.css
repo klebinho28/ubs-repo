@@ -105,3 +105,27 @@ body, html {
     padding: 10px 20px;
   }
 }
+
+/* Estilos personalizados para os botões */
+.custom-btn {
+  background-color: white !important; /* Fundo branco */
+  color: #2AAC6B !important; /* Texto verde */
+  border: 2px solid #2AAC6B !important; /* Borda verde */
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+  border-radius: 20px; /* Aumentado para bordas mais arredondadas */
+  padding: 10px 20px; /* Ajustado para melhor proporção */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover dos botões */
+.custom-btn:hover {
+  background-color: #2AAC6B !important; /* Fundo verde */
+  color: white !important; /* Texto branco */
+}
+
+/* Ajuste do botão ativo */
+.custom-btn.active {
+  background-color: #2AAC6B !important; /* Fundo verde */
+  color: white !important; /* Texto branco */
+}

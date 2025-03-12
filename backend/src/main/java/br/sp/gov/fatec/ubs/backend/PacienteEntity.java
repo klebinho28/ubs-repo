@@ -21,9 +21,10 @@ public class PacienteEntity {
     private String nacionalidade;
     private String municipioNascimento;
     private String ra;
-    private String situacaoFamiliar;
     private String frequentaEscola;
-    private String estabeleciomentoVeiculo;
+    private String Escolaridade;
+    private String situacaoFamiliar;
+    private String estabelecimentoVinculo;
     private String estabelecimentoCadastro;
     private String deficiente;
     private String visual;
@@ -35,6 +36,24 @@ public class PacienteEntity {
     private String telefoneComercial;
     private String contato;
     private String email;
+    private String endereco;
+ 
+
+public String getEscolaridade(){
+       return Escolaridade;
+}
+
+public void setEscolaridade(String Escolaridade){
+    this.Escolaridade = Escolaridade;
+}
+
+public String getEndereço(){
+    return endereco;
+}
+
+public void setEndereço(String endereco){
+    this.endereco = endereco;
+}
 
     public int getCodigo() {
         return codigo;
@@ -141,11 +160,11 @@ public class PacienteEntity {
     }
 
     public String getEstabeleciomentoVeiculo() {
-        return estabeleciomentoVeiculo;
+        return estabelecimentoVinculo;
     }
 
-    public void setEstabeleciomentoVeiculo(String estabeleciomentoVeiculo) {
-        this.estabeleciomentoVeiculo = estabeleciomentoVeiculo;
+    public void setEstabeleciomentoVeiculo(String estabelecimentoVeiculo) {
+            this.estabelecimentoVinculo = estabelecimentoVinculo;
     }
 
     public String getEstabelecimentoCadastro() {
